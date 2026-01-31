@@ -22,17 +22,17 @@ const TEST_DATA = {
     {
       tcId: 'Pos_Fun_001',
       name: 'Simple present tense statement',
-      input: 'mama iskoolee inna',
-      expected: 'මම ඉස්කෝලේ ඉන්න',
+      input: 'haaloo kohomadha kohedha inne ?',
+      expected: 'හාලෝ කොහොමද කොහෙද ඉන්නේ ?',
       category: 'Daily language usage',
       grammar: 'Simple sentence',
       length: 'S'
     },
     {
       tcId: 'Pos_Fun_002',
-      name: 'Simple food request',
-      input: 'mata kiri onee',
-      expected: 'මට කිරි ඔනේ',
+      name: 'Daily greeting',
+      input: 'Suba udhaesanak veevaa !',
+      expected: 'සුබ උදැසනක් වේවා !',
       category: 'Daily language usage',
       grammar: 'Simple sentence',
       length: 'S'
@@ -40,8 +40,8 @@ const TEST_DATA = {
     {
       tcId: 'Pos_Fun_003',
       name: 'Going home statement',
-      input: 'api gedhara yanavaa',
-      expected: 'අපි ගෙදර යනවා',
+      input: 'Bhilaal oyaagee report eka hadalaa thiyenne karunakaralaa eka balanna.',
+      expected: 'භිලාල් ඔයාගේ report එක හඩලා තියෙන්නෙ කරුනකරලා එක බලන්න.',
       category: 'Daily language usage',
       grammar: 'Simple sentence',
       length: 'S'
@@ -50,18 +50,18 @@ const TEST_DATA = {
     // Compound Sentences
     {
       tcId: 'Pos_Fun_004',
-      name: 'Two activities connected',
-      input: 'mama kaeema kannam saha passe naaginnam',
-      expected: 'මම කෑම කන්නම් සහ පස්සේ නාගින්නම්',
+      name: 'Request',
+      input: 'mama sellam karannam',
+      expected: 'මම සෙල්ලම් කරන්නම්',
       category: 'Daily language usage',
       grammar: 'Compound sentence',
       length: 'S'
     },
     {
       tcId: 'Pos_Fun_005',
-      name: 'Weather condition compound',
-      input: 'vaessa yanavanam api yannee naee',
-      expected: 'වැස්ස යනවනම් අපි යන්නේ නෑ',
+      name: 'Medium size sentence',
+      input: 'Akke mata returns report tika evala thiyanna, mama reports okkoma tika update karannam ude 9.00am ta kalin eeta passe mama aluth intern ge veda tikath balannam akkee',
+      expected: 'අක්කෙ මට returns report ටික එවල තියන්න, මම reports ඔක්කොම ටික update කරන්නම් උඩෙ 9.00am ට කලින් ඒට පස්සෙ මම අලුත් intern ගෙ වෙඩ ටිකත් බලන්නම් අක්කේ',
       category: 'Daily language usage',
       grammar: 'Compound sentence',
       length: 'S'
@@ -70,9 +70,9 @@ const TEST_DATA = {
     // Complex Sentences
     {
       tcId: 'Pos_Fun_006',
-      name: 'Conditional complex sentence',
-      input: 'oyaa enavaanam mama innaanam kaeema laeesthi karannam',
-      expected: 'ඔයා එනවානම් මම ඉන්නානම් කෑම ලෑස්ති කරන්නම්',
+      name: 'Medium size slang sentence',
+      input: '“Machan, mata adha Zoom meeting ekata join venna link eka WhatsApp karanna puLuvandha? Please ASAP evanna. Hari ban mama laptop eka connect karala ready wela ubata evannam, thanks bro.”',
+      expected: '“මචන්, මට අද Zoom meeting එකට join වෙන්න link එක WhatsApp කරන්න පුළුවන්ද? Please ASAP එවන්න. හරි බන් මම laptop එක connect කරල ready wඑල උබට එවන්නම්, thanks bro.”',
       category: 'Daily language usage',
       grammar: 'Complex sentence',
       length: 'M'
@@ -81,9 +81,9 @@ const TEST_DATA = {
     // Questions
     {
       tcId: 'Pos_Fun_007',
-      name: 'Simple question about state',
-      input: 'oyaa kohedha innee',
-      expected: 'ඔයා කොහෙද ඉන්නේ',
+      name: 'Large sentence with polite words',
+      input: '“Ayubovan machan, karuNaakaralaa mage request eka poddak balanna. Mama 2026-03-15 venida Colombo office ekata enne 9.30 AM, ETA approx 45 mins kiyala hithanne. Ehema nisa meeting eka postpone karanna puLuvandha kiyala ahanna hithuwa. Agenda eka Email ekakin yavala thiyenava, FYI document tika Google Drive eke upload karala thiyenava. Project budget eka USD 1,500 wenava saha payment eka Rs. 450,000 vitarai. ASAP confirmation ekak labunoth mama HR team ekata WhatsApp msg ekak dhaannam. Ehema nam siraavata loku help ekak machan, thanks and regards.”',
+      expected: '“අයුබොවන් මචන්, කරුණාකරලා mage request එක පොඩ්ඩක් බලන්න. මම 2026-03-15 වෙනිඩ Colombo office එකට එන්නෙ 9.30 AM, ETA approx 45 මින්ස් කියල හිතන්නෙ. එහෙම නිස meeting එක postpone කරන්න පුළුවන්ද කියල අහන්න හිතුwඅ. Agenda එක Email එකකින් යවල තියෙනව, FYI document ටික Google Drive eke upload කරල තියෙනව. Project budget එක USD 1,500 wඑනව සහ payment එක Rs. 450,000 විටරෛ. ASAP confirmation එකක් ලබුනොත් මම HR team එකට WhatsApp ම්ස්ග් එකක් දාන්නම්. එහෙම නම් සිරාවට ලොකු help එකක් මචන්, thanks and regards.”',
       category: 'Daily language usage',
       grammar: 'Interrogative (question)',
       length: 'S'
@@ -91,8 +91,8 @@ const TEST_DATA = {
     {
       tcId: 'Pos_Fun_008',
       name: 'Question about time',
-      input: 'kavaddha enna yanne',
-      expected: 'කවද්ද එන්න යන්නේ',
+      input: 'Heta office yanna enavadha',
+      expected: 'හෙට office යන්න එනවද',
       category: 'Daily language usage',
       grammar: 'Interrogative (question)',
       length: 'S'
@@ -111,8 +111,8 @@ const TEST_DATA = {
     {
       tcId: 'Pos_Fun_010',
       name: 'Direct command',
-      input: 'laBa enna',
-      expected: 'ලඟ එන්න',
+      input: 'karunakara enna',
+      expected: 'කරුනකර එන්න',
       category: 'Daily language usage',
       grammar: 'Imperative (command)',
       length: 'S'
@@ -141,7 +141,7 @@ const TEST_DATA = {
       tcId: 'Pos_Fun_013',
       name: 'Affirmative response',
       input: 'ov hari',
-      expected: 'ඔව් hari',
+      expected: 'ඔව් හරි',
       category: 'Greeting / request / response',
       grammar: 'Simple sentence',
       length: 'S'
@@ -161,7 +161,7 @@ const TEST_DATA = {
       tcId: 'Pos_Fun_015',
       name: 'Future tense plan',
       input: 'api heta kolambata yamu',
-      expected: 'අපි හෙට කොලඹට යමු',
+      expected: 'අපි හෙට කොලම්බට යමු',
       category: 'Daily language usage',
       grammar: 'Future tense',
       length: 'S'
@@ -245,7 +245,7 @@ const TEST_DATA = {
       tcId: 'Pos_Fun_023',
       name: 'Currency amount',
       input: 'mata Rs. 500k oonee',
-      expected: 'මට Rs. 500ක් ඕනෑ',
+      expected: 'මට Rs. 500ක් ඕනේ',
       category: 'Punctuation / numbers',
       grammar: 'Simple sentence',
       length: 'S'
@@ -256,7 +256,7 @@ const TEST_DATA = {
       tcId: 'Pos_Fun_024',
       name: 'Medium length conversation',
       input: 'mama heta office yanavaa eehindha mata adha raee kanna baee. oyaa mata raee eka savanna puluvandha',
-      expected: 'මම හෙට office යනවා ඒහින්ද මට අද රෑ කන්න බෑ. ඔයා මට රෑ එක සවන්න පුලුවන්ද',
+      expected: 'මම හෙට office යනවා ඒහින්ද මට අද රෑ කන්න බෑ. ඔයා මට රෑ එක savanna පුලුවන්ද',
       category: 'Daily language usage',
       grammar: 'Compound sentence',
       length: 'M'
